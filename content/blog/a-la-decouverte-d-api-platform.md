@@ -28,9 +28,6 @@ La distribution d'API Platform est disponible sur GitHub à l'adresse suivante :
 
 ```
 docker compose build --no-cache 
-```
-
-```
 docker compose up --wait
 ```
 
@@ -56,9 +53,6 @@ Rendez-vous dans le dossier de votre projet Symfony et utilisez Composer pour in
 
 ```
 cd /chemin/vers/votre/projet
-```
-
-```
 symfony composer require api
 ```
 
@@ -69,13 +63,7 @@ Si vous préférez partir d'une base propre, vous pouvez créer un nouveau proje
 
 ```
 symfony new demo-api
-```
-
-```
 cd demo-api
-```
-
-```
 symfony composer require api
 ```
 
@@ -97,105 +85,34 @@ Voici un exemple d'entité Symfony configurée pour API Platform :
 
 ```
 namespace App\Entity;
-```
 
-```
 use ApiPlatform\Metadata\ApiResource;
-```
-
-```
 use Doctrine\ORM\Mapping as ORM;
-```
-
-```
 use Symfony\Component\Validator\Constraints as Assert;
-```
 
-```
 #[ApiResource]
-```
-
-```
 #[ORM\Entity]
-```
-
-```
 class Greeting
-```
-
-```
 {
-```
-
-```
-/**
-```
-
-```
-* The entity ID
-```
-
-```
-*/
-```
-
-```
-#[ORM\Id]
-```
-
-```
-#[ORM\Column(type: 'integer')]
-```
-
-```
-#[ORM\GeneratedValue(strategy: 'SEQUENCE')]
-```
-
-```
-private ?int $id = null;
-```
-
-```
-/**
-```
-
-```
-* A nice person
-```
-
-```
-*/
-```
-
-```
-#[ORM\Column]
-```
-
-```
-#[Assert\NotBlank]
-```
-
-```
-public string $name = '';
-```
-
-```
-public function getId(): ?int
-```
-
-```
-{
-```
-
-```
-return $this->id;
-```
-
-```
-}
-```
-
-```
+    /**
+    * The entity ID
+    */
+    #[ORM\Id]
+    #[ORM\Column(type: 'integer')]
+    #[ORM\GeneratedValue(strategy: 'SEQUENCE')]
+    private ?int $id = null;
+    
+    /**
+    * A nice person
+    */
+    #[ORM\Column]
+    #[Assert\NotBlank]
+    public string $name = '';
+    
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
 }
 ```
 
