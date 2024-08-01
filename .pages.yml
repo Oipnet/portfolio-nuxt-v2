@@ -3,4 +3,7 @@ content:
     label: Posts
     path: content/blog
     type: collection
-    fields: [title, published]
+    fields:
+      - { name: published, label: Published, type: boolean }
+      - { name: title, label: Title, type: string, required: true }
+      - { name: body, label: Body, type: rich-text }
