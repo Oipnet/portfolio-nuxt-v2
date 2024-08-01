@@ -4,6 +4,12 @@ author: Arnaud POINTET
 title: A la découverte d'Api-Platform
 cover: img/content/a-la-decouverte-d-api-platform/logo-apip.png
 ---
+Découvrir API Platform, c'est plonger dans un monde où la création d'API devient un jeu d'enfant. En quelques minutes, vous pouvez générer un CRUD complet pour vos entités Symfony, accompagné d'une documentation OpenAPI prête à l'emploi.
+
+<!--more-->
+
+Mais au-delà de cette simplicité apparente, API Platform est un outil puissant qui vous permet de personnaliser chaque aspect de votre API pour répondre à des besoins complexes. Dans cet article, nous allons explorer comment démarrer avec API Platform et créer notre première API, en posant les bases pour une compréhension approfondie de ce framework incontournable.
+
 ## Les premiers pas avec API-PLATFORM
 
 Lorsque l'on découvre [API Platform](https://api-platform.com) (API-P), la simplicité de l'outil est immédiatement frappante. En quelques minutes à peine, il est possible de générer un CRUD (Create, Read, Update, Delete) complet pour nos entités Symfony. La magie opère, et nous nous retrouvons avec une documentation au format OpenAPI. Nous avons l'impression d’être les rois du REST.
@@ -116,14 +122,7 @@ class Greeting
 
 Avec cette configuration, API Platform génére automatiquement les routes CRUD pour votre entité Greeting. Voici les routes disponibles :
 
-| Endpoint                | Méthode | Description                             |
-|-------------------------|---------|-----------------------------------------|
-| **/api/greetings**      | GET     | Liste des Greetings                     |
-| **/api/greetings**      | POST    | Création d’un Greeting                  |
-| **/api/greetings/{id}** | GET     | Consultation d’un Greeting              |
-| **/api/greetings/{id}** | PUT     | Mise à jour d’un Greeting               |
-| **/api/greetings/{id}** | DELETE  | Suppression d’un Greeting               |
-    
+<table style="minWidth: 75px"><colgroup><col><col><col></colgroup><tbody><tr><th colspan="1" rowspan="1"><p>Endpoint</p></th><th colspan="1" rowspan="1"><p>Méthode</p></th><th colspan="1" rowspan="1"><p>Description</p></th></tr><tr><td colspan="1" rowspan="1"><p><strong>/api/greetings</strong></p></td><td colspan="1" rowspan="1"><p>GET</p></td><td colspan="1" rowspan="1"><p>Liste des Greetings</p></td></tr><tr><td colspan="1" rowspan="1"><p><strong>/api/greetings</strong></p></td><td colspan="1" rowspan="1"><p>POST</p></td><td colspan="1" rowspan="1"><p>Création d’un Greeting</p></td></tr><tr><td colspan="1" rowspan="1"><p><strong>/api/greetings/{id}</strong></p></td><td colspan="1" rowspan="1"><p>GET</p></td><td colspan="1" rowspan="1"><p>Consultation d’un Greeting</p></td></tr><tr><td colspan="1" rowspan="1"><p><strong>/api/greetings/{id}</strong></p></td><td colspan="1" rowspan="1"><p>PUT</p></td><td colspan="1" rowspan="1"><p>Mise à jour d’un Greeting</p></td></tr><tr><td colspan="1" rowspan="1"><p><strong>/api/greetings/{id}</strong></p></td><td colspan="1" rowspan="1"><p>DELETE</p></td><td colspan="1" rowspan="1"><p>Suppression d’un Greeting</p></td></tr></tbody></table>
 
 Ces routes permettent d'effectuer toutes les opérations CRUD sur l'entité Greeting, offrant ainsi une API complète et préte à l'emploi.
 
