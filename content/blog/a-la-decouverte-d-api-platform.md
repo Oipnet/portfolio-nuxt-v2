@@ -23,8 +23,8 @@ Il existe plusieurs possibilités que nous allons voir pour utiliser Api-platfor
 
 La distribution d'API Platform est disponible sur GitHub à l'adresse suivante : [API Platform GitHub Releases](https://github.com/api-platform/api-platform/releases/latest). Il suffit de la télécharger, de décompresser l'archive, puis de se rendre dans le dossier pour lancer les containers Docker avec les commandes suivantes :
 
-```
-docker compose build --no-cache 
+```shell
+docker compose build --no-cache
 docker compose up --wait
 ```
 
@@ -48,7 +48,7 @@ Vous pouvez installer API Platform dans un projet Symfony existant ou créer un 
 
 Rendez-vous dans le dossier de votre projet Symfony et utilisez Composer pour installer le composant API Platform :
 
-```
+```shell
 cd /chemin/vers/votre/projet
 symfony composer require api
 ```
@@ -58,7 +58,7 @@ symfony composer require api
 
 Si vous préférez partir d'une base propre, vous pouvez créer un nouveau projet Symfony et y ajouter API Platform :
 
-```
+```shell
 symfony new demo-api
 cd demo-api
 symfony composer require api
@@ -66,7 +66,7 @@ symfony composer require api
 
 Il ne reste plusqu’a lancer le serveur symfony via la CLI
 
-```
+```shell
 symfony serve
 ```
 
@@ -80,7 +80,7 @@ La force d’API Platform réside dans sa capacité à exposer rapidement vos en
 
 Voici un exemple d'entité Symfony configurée pour API Platform :
 
-```
+```php
 namespace App\Entity;
 
 use ApiPlatform\Metadata\ApiResource;
@@ -115,9 +115,13 @@ class Greeting
 
 Avec cette configuration, API Platform génére automatiquement les routes CRUD pour votre entité Greeting. Voici les routes disponibles :
 
-*   **/api/greetings** GET : Liste des Greetings POST : Création d’un Greeting
-    
-*   \*\*/api/greetings/{id}\*\*GET : Consultation d’un GreetingPUT : Mise Ã  jour d’un GreetingDELETE : Suppression d’un Greeting
+| Endpoint                | Méthode | Description                             |
+|-------------------------|---------|-----------------------------------------|
+| **/api/greetings**      | GET     | Liste des Greetings                     |
+| **/api/greetings**      | POST    | Création d’un Greeting                  |
+| **/api/greetings/{id}** | GET     | Consultation d’un Greeting              |
+| **/api/greetings/{id}** | PUT     | Mise à jour d’un Greeting               |
+| **/api/greetings/{id}** | DELETE  | Suppression d’un Greeting               |
     
 
 Ces routes permettent d'effectuer toutes les opérations CRUD sur l'entité Greeting, offrant ainsi une API complète et préte à l'emploi.

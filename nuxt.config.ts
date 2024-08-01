@@ -25,4 +25,13 @@ export default defineNuxtConfig({
   runtimeConfig: {
     apiUrl: process.env.API_URL
   },
+  content: {
+    highlight: {
+      // Theme used in all color schemes.
+      theme: {
+        default: "one-dark-pro",
+      },
+      langs: ['php', 'shell']
+    }
+  }
 })
