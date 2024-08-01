@@ -7,3 +7,6 @@ content:
       - { name: published, label: Published, type: boolean }
       - { name: title, label: Title, type: string, required: true }
       - { name: body, label: Body, type: rich-text }
+media:
+  input: public/img/content
+  output: img/content
