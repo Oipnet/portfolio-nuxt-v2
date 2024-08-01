@@ -4,7 +4,7 @@ title: A la découverte d'Api-Platform
 ---
 # A la découverte d'Api-Platform
 
-<NuxtPicture src="/img/content/a-la-decouverte-d-api-platform/logo-apip.png" class="base-picture"/>
+![](img/content/a-la-decouverte-d-api-platform/logo-apip.png)
 
 ## Les premiers pas avec API-PLATFORM
 
