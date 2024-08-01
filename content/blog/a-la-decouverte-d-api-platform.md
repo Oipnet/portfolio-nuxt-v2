@@ -2,7 +2,7 @@
 published: true
 title: A la découverte d'Api-Platform
 ---
-# A la découverte d'Api-Platform
+# {{ $doc.title }}
 
 ## Les premiers pas avec API-PLATFORM
 
