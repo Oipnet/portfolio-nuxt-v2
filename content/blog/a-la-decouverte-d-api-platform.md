@@ -1,7 +1,7 @@
 ---
+published: true
 title: A la découverte d'Api-Platform
 ---
-
 ::content-title
 A la découverte d'Api-Platform
 ::
