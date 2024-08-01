@@ -2,13 +2,11 @@
 published: true
 title: A la découverte d'Api-Platform
 ---
-::content-title
-A la découverte d'Api-Platform
-::
+# A la découverte d'Api-Platform
 
 ## Les premiers pas avec API-PLATFORM
 
-Lorsque l'on découvre [API Platform](URL="https://api-platform.com" target="_blank") (API-P), la simplicité de l'outil est immédiatement frappante. En quelques minutes à peine, il est possible de générer un CRUD (Create, Read, Update, Delete) complet pour nos entités Symfony. La magie opère, et nous nous retrouvons avec une documentation au format OpenAPI. Nous avons l'impression d’être les rois du REST.
+Lorsque l'on découvre \[API Platform\](URL="[https://api-platform.com](https://api-platform.com)" target="\_blank") (API-P), la simplicité de l'outil est immédiatement frappante. En quelques minutes à peine, il est possible de générer un CRUD (Create, Read, Update, Delete) complet pour nos entités Symfony. La magie opère, et nous nous retrouvons avec une documentation au format OpenAPI. Nous avons l'impression d’être les rois du REST.
 
 Cependant, bien que le CRUD réponde à une grande partie de nos besoins lors du développement d'API, il arrive que nous ayons des cas où l'introduction de logique métier soit nécessaire. Ces situations exigent une approche plus personnalisée et complexe que le simple CRUD ne peut offrir.
 
@@ -33,11 +31,11 @@ docker compose up --wait
 Une fois ces commandes exécutées, nous aurons trois services lancés :
 
 *   **php** : Ce service délivre l’API en utilisant FrankenPHP, un serveur d’application construit sur Caddy. Il offre également un support natif de Mercure, ce qui permet de gérer des communications en temps réel avec nos applications PHP grâce aux événements poussés sur un serveur SSE (Server-Sent Events).
-
+    
 *   **pwa** : Ce service correspond à un projet Next.js qui permet de créer un client front-end pour consommer notre API. Il inclut également une interface d’administration générée à partir de la documentation OpenAPI.
-
+    
 *   **database** : Une base de données PostgreSQL.
-
+    
 
 ### Utilisation du Symfony CLI
 
@@ -46,7 +44,7 @@ API Platform est un composant officiel de Symfony et peut être installé via Sy
 Vous pouvez installer API Platform dans un projet Symfony existant ou créer un nouveau projet Symfony pour commencer avec API Platform.
 
 *   **Pour ajouter API Platform à un projet Symfony existant** :
-
+    
 
 Rendez-vous dans le dossier de votre projet Symfony et utilisez Composer pour installer le composant API Platform :
 
@@ -55,7 +53,7 @@ cd /chemin/vers/votre/projet
 symfony composer require api
 
 *   **Pour créer un nouveau projet Symfony et ajouter API Platform** :
-
+    
 
 Si vous préférez partir d'une base propre, vous pouvez créer un nouveau projet Symfony et y ajouter API Platform :
 
@@ -133,12 +131,10 @@ return $this->id;
 
 Avec cette configuration, API Platform génére automatiquement les routes CRUD pour votre entité Greeting. Voici les routes disponibles :
 
-*   **/api/greetings**
-GET : Liste des Greetings
-POST : Création d’un Greeting
-
-*   **/api/greetings/{id}**GET : Consultation d’un GreetingPUT : Mise Ã  jour d’un GreetingDELETE : Suppression d’un Greeting
-
+*   **/api/greetings** GET : Liste des Greetings POST : Création d’un Greeting
+    
+*   \*\*/api/greetings/{id}\*\*GET : Consultation d’un GreetingPUT : Mise Ã  jour d’un GreetingDELETE : Suppression d’un Greeting
+    
 
 Ces routes permettent d'effectuer toutes les opérations CRUD sur l'entité Greeting, offrant ainsi une API complète et préte à l'emploi.
 
@@ -149,12 +145,12 @@ Nous en avons terminé avec cette première exploration d'API Platform. Nous avo
 Dans nos prochains articles, nous explorerons comment API Platform gère la récupération des données et comment nous pouvons optimiser et personnaliser ce processus. Voici quelques-uns des aspects que nous allons aborder :
 
 *   **Récupération des données** : Nous découvrirons comment API Platform gère la récupération des données via le système de Provider.
-
+    
 *   **Ne pas exposer directement nos entités** : Nous apprendrons à créer des ressources API plus sécurisées en évitant l'exposition directe des entités Doctrine. Nous explorerons l'utilisation de Data Transfer Objects (DTO) pour contrôler ce qui est exposé à travers l'API.
-
+    
 *   **Mise en place d’une politique de sécurité** : Nous aborderons la configuration des mécanismes de sécurité pour protéger vos API et gérer les permissions des utilisateurs, garantissant ainsi que seules les personnes autorisées peuvent accéder ou modifier les données.
-
+    
 *   **Et plus encore** : Nous nous pencherons également sur des fonctionnalités avancées telles que la pagination, les filtres personnalisés, et l'intégration avec des outils externes, afin de vous aider à tirer le meilleur parti d'API Platform.
-
+    
 
 Restez connectés pour approfondir ces sujets et découvrir comment API Platform peut transformer la gestion et l'exposition de vos données de manière efficace et flexible.
