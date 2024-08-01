@@ -4,6 +4,8 @@ title: A la découverte d'Api-Platform
 ---
 # A la découverte d'Api-Platform
 
+<NuxtPicture src="/img/content/a-la-decouverte-d-api-platform/logo-apip.png" class="base-picture"/>
+
 ## Les premiers pas avec API-PLATFORM
 
 Lorsque l'on découvre \[API Platform\](URL="[https://api-platform.com](https://api-platform.com)" target="\_blank") (API-P), la simplicité de l'outil est immédiatement frappante. En quelques minutes à peine, il est possible de générer un CRUD (Create, Read, Update, Delete) complet pour nos entités Symfony. La magie opère, et nous nous retrouvons avec une documentation au format OpenAPI. Nous avons l'impression d’être les rois du REST.
