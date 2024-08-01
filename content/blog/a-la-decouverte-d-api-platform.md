@@ -4,11 +4,11 @@ title: A la découverte d'Api-Platform
 ---
 # A la découverte d'Api-Platform
 
-![](img/content/a-la-decouverte-d-api-platform/logo-apip.png)
-
 ## Les premiers pas avec API-PLATFORM
 
-Lorsque l'on découvre \[API Platform\](URL="[https://api-platform.com](https://api-platform.com)" target="\_blank") (API-P), la simplicité de l'outil est immédiatement frappante. En quelques minutes à peine, il est possible de générer un CRUD (Create, Read, Update, Delete) complet pour nos entités Symfony. La magie opère, et nous nous retrouvons avec une documentation au format OpenAPI. Nous avons l'impression d’être les rois du REST.
+<p style="text-align: center"><img src="img/content/a-la-decouverte-d-api-platform/logo-apip.png"></p>
+
+Lorsque l'on découvre [API Platform](https://api-platform.com) (API-P), la simplicité de l'outil est immédiatement frappante. En quelques minutes à peine, il est possible de générer un CRUD (Create, Read, Update, Delete) complet pour nos entités Symfony. La magie opère, et nous nous retrouvons avec une documentation au format OpenAPI. Nous avons l'impression d’être les rois du REST.
 
 Cependant, bien que le CRUD réponde à une grande partie de nos besoins lors du développement d'API, il arrive que nous ayons des cas où l'introduction de logique métier soit nécessaire. Ces situations exigent une approche plus personnalisée et complexe que le simple CRUD ne peut offrir.
 
@@ -26,9 +26,13 @@ Il existe plusieurs possibilités que nous allons voir pour utiliser Api-platfor
 
 La distribution d'API Platform est disponible sur GitHub à l'adresse suivante : [API Platform GitHub Releases](https://github.com/api-platform/api-platform/releases/latest). Il suffit de la télécharger, de décompresser l'archive, puis de se rendre dans le dossier pour lancer les containers Docker avec les commandes suivantes :
 
+```
 docker compose build --no-cache 
+```
 
+```
 docker compose up --wait
+```
 
 Une fois ces commandes exécutées, nous aurons trois services lancés :
 
@@ -50,24 +54,36 @@ Vous pouvez installer API Platform dans un projet Symfony existant ou créer un 
 
 Rendez-vous dans le dossier de votre projet Symfony et utilisez Composer pour installer le composant API Platform :
 
+```
 cd /chemin/vers/votre/projet
+```
 
+```
 symfony composer require api
+```
 
 *   **Pour créer un nouveau projet Symfony et ajouter API Platform** :
     
 
 Si vous préférez partir d'une base propre, vous pouvez créer un nouveau projet Symfony et y ajouter API Platform :
 
+```
 symfony new demo-api
+```
 
+```
 cd demo-api
+```
 
+```
 symfony composer require api
+```
 
 Il ne reste plusqu’a lancer le serveur symfony via la CLI
 
+```
 symfony serve
+```
 
 ## Prêt pour créer nos routes API
 
@@ -77,59 +93,111 @@ Parfait ! Maintenant que votre API est prète, il est temps de définir vos rout
 
 La force d’API Platform réside dans sa capacité à exposer rapidement vos entités Symfony au travers d’une API RESTful. Pour ce faire, il vous suffit d’ajouter l’attribut ApiPlatform\\Metadata\\ApiResource à vos entités. API Platform se charge automatiquement du mapping, de la documentation, et de la réponse au format JSON-LD.
 
-Voici un exemple d'entitÃ© Symfony configurÃ©e pour API Platform :
+Voici un exemple d'entité Symfony configurée pour API Platform :
 
-namespace App\\Entity;
+```
+namespace App\Entity;
+```
 
-use ApiPlatform\\Metadata\\ApiResource;
+```
+use ApiPlatform\Metadata\ApiResource;
+```
 
-use Doctrine\\ORM\\Mapping as ORM;
+```
+use Doctrine\ORM\Mapping as ORM;
+```
 
-use Symfony\\Component\\Validator\\Constraints as Assert;
+```
+use Symfony\Component\Validator\Constraints as Assert;
+```
 
-#\[ApiResource\]
+```
+#[ApiResource]
+```
 
-#\[ORM\\Entity\]
+```
+#[ORM\Entity]
+```
 
+```
 class Greeting
+```
 
+```
 {
+```
 
-/\*\*
+```
+/**
+```
 
-\* The entity ID
+```
+* The entity ID
+```
 
-\*/
+```
+*/
+```
 
-#\[ORM\\Id\]
+```
+#[ORM\Id]
+```
 
-#\[ORM\\Column(type: 'integer')\]
+```
+#[ORM\Column(type: 'integer')]
+```
 
-#\[ORM\\GeneratedValue(strategy: 'SEQUENCE')\]
+```
+#[ORM\GeneratedValue(strategy: 'SEQUENCE')]
+```
 
+```
 private ?int $id = null;
+```
 
-/\*\*
+```
+/**
+```
 
-\* A nice person
+```
+* A nice person
+```
 
-\*/
+```
+*/
+```
 
-#\[ORM\\Column\]
+```
+#[ORM\Column]
+```
 
-#\[Assert\\NotBlank\]
+```
+#[Assert\NotBlank]
+```
 
+```
 public string $name = '';
+```
 
+```
 public function getId(): ?int
+```
 
+```
 {
+```
 
+```
 return $this->id;
+```
 
+```
 }
+```
 
+```
 }
+```
 
 Avec cette configuration, API Platform génére automatiquement les routes CRUD pour votre entité Greeting. Voici les routes disponibles :
 
