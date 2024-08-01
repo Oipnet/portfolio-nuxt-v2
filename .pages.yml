@@ -10,3 +10,4 @@ content:
 media:
   input: public/img/content
   output: img/content
+  categories: [image]
