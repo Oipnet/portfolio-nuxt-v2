@@ -1,7 +1,8 @@
 ---
-published: true
-cover: img/content/a-la-decouverte-d-api-platform/logo-apip.png
+published: 2024-08-01
+author: Arnaud POINTET
 title: A la découverte d'Api-Platform
+cover: img/content/a-la-decouverte-d-api-platform/logo-apip.png
 ---
 ## Les premiers pas avec API-PLATFORM
 
