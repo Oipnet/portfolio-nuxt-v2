@@ -13,8 +13,11 @@
 </template>
 
 <style>
+  .nuxt-content h1 {
+    @apply text-4xl font-title text-primary mt-10 ml-24 mb-2;
+  }
   .nuxt-content h2 {
-    @apply font-sub-title ml-8 mb-8 font-bold;
+    @apply font-sub-title ml-24 mb-8;
   }
 
   .nuxt-content p {
