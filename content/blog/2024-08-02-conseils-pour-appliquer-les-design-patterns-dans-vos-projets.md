@@ -1,7 +1,9 @@
 ---
 published: 2028-09-12
 author: Arnaud POINTET
+keywords: WIP
 title: Conseils pour Appliquer les Design Patterns dans vos Projets
+cover: img/content/a-la-decouverte-d-api-platform/logo-apip.png
 sitemap:
   lastmod: 2024-08-02
 ---
