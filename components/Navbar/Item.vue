@@ -6,7 +6,7 @@ defineProps<{
 </script>
 
 <template>
-  <li><NuxtLink class="text-sm hover:text-gray-500" :to="url">{{ name}}</NuxtLink></li>
+  <li><NuxtLink class="text-sm hover:text-gray-500 uppercase" :to="url">{{ name}}</NuxtLink></li>
 </template>
 
 <style scoped>

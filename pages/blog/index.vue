@@ -1,11 +1,12 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue';
 import {format} from "date-fns";
+import {useListArticles} from "~/composables/blog/useListArticles";
 
 const currentPage = ref(1);
 const itemsPerPage = 9;
 
-const { data: articles } = await useAsyncData('liste', () => queryContent('/blog').find());
+const { data: articles } = await useListArticles(9);
 
 // Pagination logic
 const totalPages = computed(() => Math.ceil(articles?.value?.length / itemsPerPage));

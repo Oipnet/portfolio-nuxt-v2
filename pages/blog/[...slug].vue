@@ -5,11 +5,12 @@ import {useJsonMetadata} from "~/composables/seo/useJsonMetadata";
 import type Frontmatter from "~/interfaces/frontmatter";
 import {useMeta} from "~/composables/seo/useMeta";
 import {useLinks} from "~/composables/seo/useLinks";
+import {useShowArticle} from "~/composables/blog/useShowArticle";
 
 const route = useRoute();
 const config = useRuntimeConfig();
 
-const { data: page } = await useAsyncData(route.params.slug.join('_'), queryContent(`/blog/${route.params.slug.join('/')}`).findOne)
+const { data: page } = await useShowArticle(route.params.slug.join('/'))
 const frontmatter: Frontmatter = {
   published: new Date(page?.value?.published) || new Date(),
   cover: page?.value?.cover || '',

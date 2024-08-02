@@ -31,7 +31,7 @@
       <div>
         <ul>
           <li class="mb-1" v-for="item in items">
-            <NuxtLink class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" :to="item.url" @click.native="handleToggleNavbar(100)">{{ item.name }}</NuxtLink>
+            <NuxtLink class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded uppercase" :to="item.url" @click.native="handleToggleNavbar(100)">{{ item.name }}</NuxtLink>
           </li>
         </ul>
       </div>

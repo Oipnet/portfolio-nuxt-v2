@@ -1,7 +1,8 @@
 <script setup lang="ts">
-const { data: articles } = await useAsyncData('liste', () => queryContent('/blog').find());
+// const { data: articles } = await useAsyncData('liste', () => queryContent('/blog').where({published: {$lt: new Date()}}).find());
+import {useListArticles} from "~/composables/blog/useListArticles";
 
-console.log(articles);
+const { data: articles } = await useListArticles(3)
 </script>
 
 <template>
