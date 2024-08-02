@@ -1,20 +1,22 @@
 <script setup lang="ts">
+import fr from 'date-fns/locale/fr';
+import {format} from "date-fns";
+
 const route = useRoute();
 
 const { data: page } = await useAsyncData(route.params.slug.join('_'), queryContent(`/blog/${route.params.slug.join('/')}`).findOne)
 const frontmatter = {
-  published: page?.value?.published || false,
+  published: new Date(page?.value?.published) || new Date(),
   cover: page?.value?.cover || '',
   title: page?.value?.title || '',
+  author: page?.value?.author || '',
 } || {}
-
-console.log(page, frontmatter)
 </script>
 
 <template>
   <div class="nuxt-content">
     <Container>
-      <BaseTitle :title="frontmatter.title" :subTitle="frontmatter.published ? 'Publié le WIP par WIP' : ''"/>
+      <BaseTitle :title="frontmatter.title" :subTitle="`Publié le ${format(frontmatter.published, 'dd MMM yyyy', { locale: fr })} par ${frontmatter.author}`"/>
       <NuxtPicture format="webp" :src="frontmatter.cover" :alt="frontmatter.title" class="mr-8 col-span-1 w-full"
                    :img-attrs="{ class: 'h-[350px] mx-auto'}"/>
       <div class="mt-8 leading-relaxed">
@@ -27,11 +29,15 @@ console.log(page, frontmatter)
 </template>
 
 <style>
+  .nuxt-content {
+    @apply max-w-[1248px] mx-auto my-10 p-8;
+  }
+
   .nuxt-content h1 {
-    @apply text-4xl font-title text-primary mt-10 ml-24 mb-2;
+    @apply text-4xl font-title text-primary mt-10 mb-2;
   }
   .nuxt-content h2 {
-    @apply font-sub-title ml-24 mb-8;
+    @apply font-sub-title mb-8;
   }
 
   .nuxt-content p {

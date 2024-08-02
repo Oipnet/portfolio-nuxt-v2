@@ -1,8 +1,8 @@
 <template>
   <nav class="relative px-4 py-4 flex justify-between items-center bg-white">
-    <a class="text-3xl font-bold leading-none" href="#">
+    <NuxtLink class="text-3xl font-bold leading-none" href="/">
       <NuxtPicture format="webp" src="/img/text-logo.png" alt="Forelse" :img-attrs="{ class: 'h-10' }"/>
-    </a>
+    </NuxtLink>
     <div class="lg:hidden">
       <button class="navbar-burger flex items-center text-blue-600 p-3" @click.prevent="handleToggleNavbar">
         <svg class="block h-4 w-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -53,7 +53,7 @@ const items = [{
   url: '/'
 },
 {
-  name: 'Articles',
+  name: 'Blog',
   url: '/blog'
 },
 {
