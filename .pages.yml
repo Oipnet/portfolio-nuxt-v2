@@ -4,12 +4,34 @@ content:
     path: content/blog
     type: collection
     fields:
-      - { name: published, label: Published, type: date, required: true }
-      - { name: author, label: Autheur, type: string, required: true }
-      - { name: title, label: Title, type: string, required: true }
-      - { name: cover, label: Couverture, type: image }
-      - { name: title, label: Title, type: string, required: true }
-      - { name: body, label: Body, type: rich-text }
+      - name: published
+        label: Published
+        type: date
+        required: true
+      - name: author
+        label: Auteur
+        type: string
+        required: true
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: cover
+        label: Couverture
+        type: image
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: body
+        label: Body
+        type: rich-text
+      - name: sitemap
+        label: Sitemap
+        type: object
+        fields:
+          - { name: loc, label: Loc, type: string }
+            
 media:
   input: public/img/content
   output: img/content
