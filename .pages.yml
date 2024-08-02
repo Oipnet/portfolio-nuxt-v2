@@ -31,6 +31,9 @@ content:
         type: object
         fields:
           - { name: loc, label: Loc, type: string }
+          - { name: lastmod, label: Last modification, type: date }
+          - { name: changefreq, label: Change freq, type: string }
+          - { name: priority, label: Priority, type: number }
             
 media:
   input: public/img/content
