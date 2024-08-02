@@ -2,23 +2,34 @@
 import fr from 'date-fns/locale/fr';
 import {format} from "date-fns";
 import {useJsonMetadata} from "~/composables/seo/useJsonMetadata";
+import type Frontmatter from "~/interfaces/frontmatter";
+import {useMeta} from "~/composables/seo/useMeta";
+import {useLinks} from "~/composables/seo/useLinks";
 
 const route = useRoute();
+const config = useRuntimeConfig();
 
 const { data: page } = await useAsyncData(route.params.slug.join('_'), queryContent(`/blog/${route.params.slug.join('/')}`).findOne)
-const frontmatter = {
+const frontmatter: Frontmatter = {
   published: new Date(page?.value?.published) || new Date(),
   cover: page?.value?.cover || '',
   title: page?.value?.title || '',
   author: page?.value?.author || '',
-  description: page?.value?.description || ''
+  description: page?.value?.description || '',
+  keywords: page?.value?.keywords.split(',') || [],
+  url: route.fullPath,
+  baseUrl: config.public.baseUrl  || ''
 } || {}
+
+console.log(frontmatter)
 
 useContentHead(page)
 
 useHead({
+  meta: useMeta(frontmatter),
+  link: useLinks(frontmatter),
   script: [
-      useJsonMetadata(frontmatter)
+      useJsonMetadata(frontmatter),
   ]
 })
 </script>

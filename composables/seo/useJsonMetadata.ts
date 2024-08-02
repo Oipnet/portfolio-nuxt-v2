@@ -1,4 +1,6 @@
-export const useJsonMetadata = (frontmatter: any) => {
+import type Frontmatter from "~/interfaces/frontmatter";
+
+export const useJsonMetadata = (frontmatter: Frontmatter) => {
     return {
         type: 'application/ld+json',
         innerHTML: JSON.stringify({

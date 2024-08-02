@@ -14,7 +14,7 @@ export default defineNuxtConfig({
     "@nuxt/icon",
     "@nuxtjs/fontaine",
     "@tailvue/nuxt",
-    "@nuxt/content"
+    "@nuxt/content",
   ],
 
   formkit: {
@@ -23,7 +23,10 @@ export default defineNuxtConfig({
   },
 
   runtimeConfig: {
-    apiUrl: process.env.API_URL
+    apiUrl: process.env.API_URL,
+    public: {
+      baseUrl: process.env.PUBLIC_BASE_URL || 'https://votre-site.com',
+    },
   },
   content: {
     highlight: {
