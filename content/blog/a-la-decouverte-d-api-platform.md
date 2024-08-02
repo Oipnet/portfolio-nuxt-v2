@@ -3,6 +3,38 @@ published: 2024-08-01
 author: Arnaud POINTET
 title: A la découverte d'Api-Platform
 cover: img/content/a-la-decouverte-d-api-platform/logo-apip.png
+canonical: https://forelse.fr/blog/a-la-decouverte-d-api-platform
+head:
+  meta:
+    - name: keywords
+      content: "API Platform, Symfony, API RESTful, CRUD Symfony, Développement Web, OpenAPI, Tutoriel API, Guide Symfony"
+    - name: author
+      content: Arnaud POINTET
+    - name: robots
+      content: "index, follow"
+    - name: og:title
+      content: "A la découverte d'Api-Platform"
+    - name: "og:description"
+      content: "Découvrez comment démarrer avec API Platform pour créer une API RESTful en utilisant Symfony. Ce guide étape par étape vous aide à générer rapidement un CRUD complet pour vos entités Symfony."
+    - name: "og:image"
+      content: "https://forelse.fr/img/content/a-la-decouverte-d-api-platform/logo-apip.png"
+    - name: "og:url"
+      content: "https://forelse.fr/blog/a-la-decouverte-d-api-platform"
+    - name: "og:type"
+      content: "article"
+    - name: "twitter:card"
+      content: "summary_large_image"
+    - name: "twitter:title"
+      content: "A la découverte d'Api-Platform"
+    - name: "twitter:description"
+      content: "Découvrez comment démarrer avec API Platform pour créer une API RESTful en utilisant Symfony. Ce guide étape par étape vous aide à générer rapidement un CRUD complet pour vos entités Symfony."
+    - name: "twitter:image"
+      content: "https://forelse.fr/img/content/a-la-decouverte-d-api-platform/logo-apip.png"
+sitemap:
+  loc: /blog/a-la-decouverte-d-api-platform
+  lastmod: 2024-08-01
+  changefreq: monthly
+  priority: 0.8
 ---
 Découvrir API Platform, c'est plonger dans un monde où la création d'API devient un jeu d'enfant. En quelques minutes, vous pouvez générer un CRUD complet pour vos entités Symfony, accompagné d'une documentation OpenAPI prête à l'emploi.
 

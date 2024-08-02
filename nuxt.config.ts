@@ -32,6 +32,11 @@ export default defineNuxtConfig({
         default: "one-dark-pro",
       },
       langs: ['php', 'shell']
-    }
+    },
+  },
+  site: {
+    url: 'https://forelse.fr',
+    name: 'Forelse',
+    cacheMaxAgeSeconds: 3600,
   }
 })

@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import fr from 'date-fns/locale/fr';
 import {format} from "date-fns";
+import {useJsonMetadata} from "~/composables/seo/useJsonMetadata";
 
 const route = useRoute();
 
@@ -10,7 +11,16 @@ const frontmatter = {
   cover: page?.value?.cover || '',
   title: page?.value?.title || '',
   author: page?.value?.author || '',
+  description: page?.value?.description || ''
 } || {}
+
+useContentHead(page)
+
+useHead({
+  script: [
+      useJsonMetadata(frontmatter)
+  ]
+})
 </script>
 
 <template>
