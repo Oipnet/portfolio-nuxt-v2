@@ -1,6 +1,6 @@
 <script setup lang="ts">
 
-import BaseButton from "~/components/global/BaseButton.vue";
+import BaseButton from "~/components/global/base-button.vue";
 </script>
 
 <template>

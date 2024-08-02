@@ -21,8 +21,6 @@ const frontmatter: Frontmatter = {
   baseUrl: config.public.baseUrl  || ''
 } || {}
 
-console.log(frontmatter)
-
 useContentHead(page)
 
 useHead({

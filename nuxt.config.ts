@@ -25,7 +25,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     apiUrl: process.env.API_URL,
     public: {
-      baseUrl: process.env.PUBLIC_BASE_URL || 'https://votre-site.com',
+      baseUrl: process.env.PUBLIC_BASE_URL || 'http://localhost:3000',
     },
   },
   content: {

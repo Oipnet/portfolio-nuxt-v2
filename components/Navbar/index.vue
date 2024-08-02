@@ -17,7 +17,7 @@
   </nav>
   <div class="navbar-menu relative z-50 hidden">
     <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25" @click.prevent="handleToggleNavbar"></div>
-    <nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
+    <nav class="fixed top-0 right-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
       <div class="flex items-center mb-8">
         <a class="mr-auto text-3xl font-bold leading-none" href="#">
           <NuxtPicture format="webp" src="/img/text-logo.png" alt="Forelse" :img-attrs="{ class: 'h-10' }"/>
@@ -47,19 +47,10 @@
 <script setup>
 
 import Item from "~/components/Navbar/Item.vue";
+import {useNavbarItems} from "~/composables/useNavbarItems.ts";
 
-const items = [{
-  name: 'Accueil',
-  url: '/'
-},
-{
-  name: 'Blog',
-  url: '/blog'
-},
-{
-  name: 'Me contacter',
-  url: '/contact'
-}]
+const items = useNavbarItems();
+
 function handleToggleNavbar(delay = 0) {
   setTimeout(() => {
     const navbarMenu = document.querySelector('.navbar-menu');

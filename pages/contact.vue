@@ -11,7 +11,7 @@
                :img-attrs="{ class: 'h-[350px] mx-auto'}"/>
 </template>
 <script setup lang="ts">
-import Contact from "~/components/Form/Contact.vue";
+import Contact from "~/components/Form/contact.vue";
 import {useNameGenerator} from "~/composables/useNameGenerator";
 
 const name = await useNameGenerator();
