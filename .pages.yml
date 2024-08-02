@@ -12,6 +12,9 @@ content:
         label: Auteur
         type: string
         required: true
+      - name: keywords
+        label: Mots clef
+        type: string
       - name: title
         label: Title
         type: string
