@@ -7,9 +7,11 @@ cover: img/content/a-la-decouverte-d-api-platform/logo-apip.png
 sitemap:
   lastmod: 2024-08-02
 ---
-Les design patterns sont des solutions éprouvées pour résoudre des problèmes récurrents de conception logicielle. Ils offrent des approches standardisées pour organiser le code, ce qui améliore sa lisibilité, sa maintenabilité et sa flexibilité. Cependant, leur utilisation doit être réfléchie et adaptée au contexte. Cet article vous propose des conseils pratiques pour appliquer efficacement les design patterns dans vos projets, sans tomber dans le piège de l'over-engineering.
+Les design patterns sont des solutions éprouvées pour résoudre des problèmes récurrents de conception logicielle. Ils offrent des approches standardisées pour organiser le code, ce qui améliore sa lisibilité, sa maintenabilité et sa flexibilité.
 
 <!--more-->
+
+Cependant, leur utilisation doit être réfléchie et adaptée au contexte. Cet article vous propose des conseils pratiques pour appliquer efficacement les design patterns dans vos projets, sans tomber dans le piège de l'over-engineering.
 
 ### 1\. Comprendre les Besoins de votre Projet
 
