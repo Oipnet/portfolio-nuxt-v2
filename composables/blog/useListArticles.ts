@@ -1,3 +1,7 @@
 export const useListArticles = async (limit: number = 20) => {
-    return useAsyncData('liste', () => queryContent('/blog').where({published: {$lt: new Date()}}).limit(limit).find());
+    const route = useRoute();
+
+    const where = route.query.dev_mode === 1 ? {} : {published: {$lt: new Date()}};
+
+    return useAsyncData('liste', () => queryContent('/blog').where(where).limit(limit).find());
 }
