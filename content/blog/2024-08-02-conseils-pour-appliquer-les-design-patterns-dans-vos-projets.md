@@ -9,6 +9,8 @@ sitemap:
 ---
 Les design patterns sont des solutions éprouvées pour résoudre des problèmes récurrents de conception logicielle. Ils offrent des approches standardisées pour organiser le code, ce qui améliore sa lisibilité, sa maintenabilité et sa flexibilité. Cependant, leur utilisation doit être réfléchie et adaptée au contexte. Cet article vous propose des conseils pratiques pour appliquer efficacement les design patterns dans vos projets, sans tomber dans le piège de l'over-engineering.
 
+<!--more-->
+
 ### 1\. Comprendre les Besoins de votre Projet
 
 Avant d'appliquer un design pattern, il est crucial de bien comprendre les exigences de votre projet. Les patterns ne sont pas des solutions universelles, et leur application dépend du contexte. Posez-vous les questions suivantes :
