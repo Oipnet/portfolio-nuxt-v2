@@ -23,7 +23,7 @@ const paginatedArticles = computed(() => {
     <BaseTitle title="Blog" />
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12 max-w-[2048px]">
       <div v-for="article in paginatedArticles" :key="article._id" class="article-card">
-          <article class="card p-4 h-[500px]">
+          <article class="card p-4 h-[550px] grid grid-cols-1">
             <NuxtPicture format="webp" :src="article.cover" :alt="article.title"
                          :img-attrs="{ class: 'w-full h-48 object-contain'}"/>
             <div class="p-4">
