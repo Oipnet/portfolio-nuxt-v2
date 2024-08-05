@@ -16,6 +16,9 @@ export default defineNuxtConfig({
     "@tailvue/nuxt",
     "@nuxt/content",
   ],
+  plugins: [
+    '~/plugins/disqus'
+  ],
 
   formkit: {
     // Experimental support for auto loading (see note):

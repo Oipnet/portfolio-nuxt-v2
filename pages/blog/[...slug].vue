@@ -29,16 +29,6 @@ useHead({
   link: useLinks(frontmatter),
   script: [
     useJsonMetadata(frontmatter),
-    {
-      type: "text/javascript",
-      innerHTML: `
-      (function() { // DON'T EDIT BELOW THIS LINE
-        var d = document, s = d.createElement('script');
-        s.src = 'https://forelse-fr.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-      })();`
-    }
   ]
 })
 </script>
@@ -53,7 +43,9 @@ useHead({
       <div class="mt-8 leading-relaxed">
         <ContentRenderer :value="page"/>
       </div>
-      <div id="disqus_thread"></div>
+      <ClientOnly>
+        <Disqus />
+      </ClientOnly>
     </Container>
   </div>
   <NuxtPicture format="webp" src="/img/logo-800.png" alt="Forelse" class="header--logo mr-8 col-span-1 w-full"
