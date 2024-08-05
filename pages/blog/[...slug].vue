@@ -99,4 +99,8 @@ useHead({
 .nuxt-content table td {
   @apply p-4;
 }
+
+.nuxt-content code {
+  overflow-x: scroll;
+}
 </style>

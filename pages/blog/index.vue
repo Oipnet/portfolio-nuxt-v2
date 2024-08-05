@@ -21,21 +21,23 @@ const paginatedArticles = computed(() => {
 <template>
   <Container>
     <BaseTitle title="Blog" />
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12 max-w-[2048px]">
+    <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-8 mt-12 max-w-[2048px] mx-4 md:mx-0">
       <div v-for="article in paginatedArticles" :key="article._id" class="article-card">
-          <article class="card p-4 h-[550px] grid grid-cols-1">
+          <article class="card p-4 h-full grid grid-cols-1">
             <NuxtPicture format="webp" :src="article.cover" :alt="article.title"
                          :img-attrs="{ class: 'w-full h-48 object-contain'}"/>
             <div class="p-4">
               <h1 class="text-xl text-center font-title font-semibold">{{ article.title }}</h1>
               <h2 class="text-xs text-center font-sub-title">Publié le {{ format(article.published, 'dd/MM/yyyy')}} par {{ article.author }}</h2>
+            </div>
+            <div class="p-4 md:min-h-[150px] xl:min-h-[250px]">
               <ClientOnly>
                 <p class="text-sm text-gray-600 mt-4 leading-relaxed">
                   <ContentRendererMarkdown :value="article.excerpt" />
                 </p>
-                <NuxtLink :href="article._path" class="block mt-8">Lire la suite</NuxtLink>
               </ClientOnly>
             </div>
+            <NuxtLink :href="article._path" class="block mt-8 text-right font-sub-title self-end underline">Lire la suite</NuxtLink>
           </article>
       </div>
     </div>
