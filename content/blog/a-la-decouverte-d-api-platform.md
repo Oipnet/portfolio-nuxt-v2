@@ -13,8 +13,6 @@ sitemap:
 ---
 Découvrir API Platform, c'est plonger dans un monde où la création d'API devient un jeu d'enfant. En quelques minutes, vous pouvez générer un CRUD complet pour vos entités Symfony, accompagné d'une documentation OpenAPI prête à l'emploi.
 
-<!--more-->
-
 Mais au-delà de cette simplicité apparente, API Platform est un outil puissant qui vous permet de personnaliser chaque aspect de votre API pour répondre à des besoins complexes. Dans cet article, nous allons explorer comment démarrer avec API Platform et créer notre première API, en posant les bases pour une compréhension approfondie de ce framework incontournable.
 
 ## Les premiers pas avec API-PLATFORM
@@ -135,7 +133,7 @@ Ces routes permettent d'effectuer toutes les opérations CRUD sur l'entité Gree
 
 ## Conclusion
 
-Nous en avons terminé avec cette première exploration d'API Platform. Nous avons vu comment, en un rien de temps, nous pouvons exposer nos entités Symfony via une API RESTful grâce à la simplicité d'API Platform. Cette approche de base nous permet de dÃ©marrer rapidement, mais l'outil propose bien plus que cela.
+Nous en avons terminé avec cette première exploration d'API Platform. Nous avons vu comment, en un rien de temps, nous pouvons exposer nos entités Symfony via une API RESTful grâce à la simplicité d'API Platform. Cette approche de base nous permet de démarrer rapidement, mais l'outil propose bien plus que cela.
 
 Dans nos prochains articles, nous explorerons comment API Platform gère la récupération des données et comment nous pouvons optimiser et personnaliser ce processus. Voici quelques-uns des aspects que nous allons aborder :
 
