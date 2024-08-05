@@ -6,6 +6,7 @@ import type Frontmatter from "~/interfaces/frontmatter";
 import {useMeta} from "~/composables/seo/useMeta";
 import {useLinks} from "~/composables/seo/useLinks";
 import {useShowArticle} from "~/composables/blog/useShowArticle";
+import {Disqus} from "vue-disqus";
 
 const route = useRoute();
 const config = useRuntimeConfig();
@@ -21,6 +22,10 @@ const frontmatter: Frontmatter = {
   url: route.fullPath,
   baseUrl: config.public.baseUrl || ''
 } || {}
+
+const identifier = frontmatter.url // Identifiant unique pour le commentaire
+const title = frontmatter.title
+const url = `${frontmatter.baseUrl}${frontmatter.url}`
 
 useContentHead(page)
 
@@ -44,7 +49,9 @@ useHead({
         <ContentRenderer :value="page"/>
       </div>
       <ClientOnly>
-        <Disqus />
+        <Disqus :identifier="identifier"
+                :title="title"
+                :url="url"/>
       </ClientOnly>
     </Container>
   </div>
