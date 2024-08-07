@@ -15,6 +15,7 @@ export default defineNuxtConfig({
     "@nuxtjs/fontaine",
     "@tailvue/nuxt",
     "@nuxt/content",
+    "vue3-carousel-nuxt"
   ],
   plugins: [
     '~/plugins/disqus'

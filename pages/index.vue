@@ -25,9 +25,15 @@
   <container>
     <Services/>
   </container>
+  <container>
+    <Testimonials :testimonials="testimonials"/>
+  </container>
 </template>
 <script setup lang="ts">
 import Header from "~/components/Header.vue";
 import Container from "~/components/global/container.vue";
 import Services from "~/components/Services.vue";
+import {useListTestimonials} from "~/composables/testimonials/useListTestimonials";
+
+const testimonials = await useListTestimonials();
 </script>
