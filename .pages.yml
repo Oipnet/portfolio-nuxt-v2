@@ -61,7 +61,25 @@ content:
           - name: priority
             label: Priority
             type: number
-            
+  - name: testimonials
+    label: Recomendations
+    path: content/testimonials
+    type: collection
+    fields:
+      - name: author
+        label: auteur
+        type: string
+        required: true
+      - name: createdAt
+        label: Date
+        type: date
+        required: true
+      - name: text
+        label: Text
+        type: rich-text
+        required: true
+
+        
 media:
   input: public/img/content
   output: img/content
