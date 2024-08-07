@@ -70,7 +70,7 @@ content:
         label: auteur
         type: string
         required: true
-      - name: createdAt
+      - name: date
         label: Date
         type: date
         required: true
