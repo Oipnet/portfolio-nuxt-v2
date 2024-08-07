@@ -74,7 +74,7 @@ content:
         label: Date
         type: date
         required: true
-      - name: text
+      - name: body
         label: Text
         type: rich-text
         required: true
