@@ -9,7 +9,8 @@ import BaseButton from "~/components/global/base-button.vue";
       <h1 class="text-6xl text-primary font-title uppercase">Forelse</h1>
       <h2 class="text-black text-2xl mt-4 font-sub-title">Conception et réalisation d'application WEB</h2>
       <div class="header--title-cta mt-16">
-        <base-button content="Me contacter" target="/contact"/>
+        <base-button content="Me contacter" href="/contact" target="_self" />
+        <base-button content="Prendre rendez-vous" href="https://calendly.com/forelse/discutons-de-votre-projet" secondary target="_blank"/>
       </div>
     </div>
     <NuxtPicture format="webp" src="/img/logo-800.png" alt="Forelse" class="header--logo mr-8 col-span-1 w-full" :img-attrs="{ class: 'h-[350px] mx-auto'}"/>

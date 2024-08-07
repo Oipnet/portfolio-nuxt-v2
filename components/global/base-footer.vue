@@ -31,7 +31,10 @@ const { data: articles } = await useListArticles(3)
         </ul>
 
       </div>
-      <div class="w-1/3"></div>
+      <div class="w-1/3">
+        <h3 class="text-2xl font-title mb-4">Contact</h3>
+        <nuxt-link to="https://calendly.com/forelse/discutons-de-votre-projet" target="_blank">Prendre un rendez-vous</nuxt-link>
+      </div>
     </div>
   </footer>
 </template>
