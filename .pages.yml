@@ -78,6 +78,23 @@ content:
         label: Text
         type: rich-text
         required: true
+  - name: services
+    label: Services
+    path: content/services
+    type: collection
+    fields:
+      - name: title
+        label: Titre
+        type: string
+        required: true
+      - name: excerpt
+        label: Resumé
+        type: string
+        required: true
+      - name: body
+        label: Contenu
+        type: rich-text
+        required: true
 
         
 media:
