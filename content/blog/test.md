@@ -1,5 +1,5 @@
 ---
-filename: test
+slug: test
 published: 2030-08-09
 author: Arnaud POINTET
 title: Test
