@@ -3,8 +3,9 @@ content:
     label: Posts
     path: content/blog
     type: collection
+    filename: fields.slug
     fields:
-      - name: filename
+      - name: slug
         label: Nom du fichier
         type: string
       - name: published
