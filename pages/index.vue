@@ -18,10 +18,7 @@
       </p>
     </div>
   </container>
-  <div class="h-auto pt-8 pb-8 md:h-36 bg-primary text-white flex flex-col md:flex-row justify-center md:justify-end items-center md:pr-32 text-5xl font-title gap-12">
-    <p class="text-center md:text-right">Prenons le temps de se connaitre</p>
-    <base-button content="Me contacter" href="/contact" secondary/>
-  </div>
+  <me-contacter />
   <container>
     <services-list :services="services.data"/>
   </container>
