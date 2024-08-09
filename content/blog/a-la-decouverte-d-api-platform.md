@@ -1,4 +1,5 @@
 ---
+slug: a-la-decouverte-d-api-platform
 published: 2024-08-01
 author: Arnaud POINTET
 keywords: API Platform, Symfony, API RESTful, CRUD Symfony, Développement Web,
