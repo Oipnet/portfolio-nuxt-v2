@@ -1,4 +1,5 @@
 ---
+slug: rodolphe-rodolphe-cochet-conseil
 author: Rodolphe - Rodolphe Cochet Conseil
 date: 2020-04-15
 ---

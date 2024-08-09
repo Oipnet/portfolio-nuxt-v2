@@ -1,4 +1,5 @@
 ---
+slug: maintenance-applicative
 title: Maintenance applicative
 ---
 Assurez la continuité et la performance de vos applications grâce à un service de maintenance applicative complet.

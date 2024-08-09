@@ -1,4 +1,5 @@
 ---
+slug: karim-gridky
 author: Karim - GRIDKY
 date: 2020-07-20
 ---

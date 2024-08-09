@@ -26,10 +26,6 @@ content:
       - name: cover
         label: Couverture
         type: image
-      - name: title
-        label: Title
-        type: string
-        required: true
       - name: body
         label: Body
         type: rich-text
@@ -69,7 +65,11 @@ content:
     label: Recommandations
     path: content/testimonials
     type: collection
+    filename: "{fields.slug}.md"
     fields:
+      - name: slug
+        label: Slug
+        type: string
       - name: author
         label: auteur
         type: string
@@ -86,7 +86,11 @@ content:
     label: Services
     path: content/services
     type: collection
+    filename: "{fields.slug}.md"
     fields:
+      - name: slug
+        label: Slug
+        type: string
       - name: title
         label: Titre
         type: string
