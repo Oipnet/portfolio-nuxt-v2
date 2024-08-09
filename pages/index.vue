@@ -23,17 +23,18 @@
     <base-button content="Me contacter" href="/contact" secondary/>
   </div>
   <container>
-    <Services/>
+    <services-list :services="services.data"/>
   </container>
   <container>
     <Testimonials :testimonials="testimonials"/>
   </container>
 </template>
 <script setup lang="ts">
-import Header from "~/components/Header.vue";
-import Container from "~/components/global/container.vue";
-import Services from "~/components/Services.vue";
 import {useListTestimonials} from "~/composables/testimonials/useListTestimonials";
+import {useListServices} from "~/composables/services/useListServices";
 
 const testimonials = await useListTestimonials();
+const services = await useListServices(3)
+
+console.log(services)
 </script>
