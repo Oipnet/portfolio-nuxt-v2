@@ -62,7 +62,7 @@ content:
             label: Priority
             type: number
   - name: testimonials
-    label: Recomendations
+    label: Recommandations
     path: content/testimonials
     type: collection
     fields:
