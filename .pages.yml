@@ -87,10 +87,6 @@ content:
         label: Titre
         type: string
         required: true
-      - name: excerpt
-        label: Resumé
-        type: rich-text
-        required: true
       - name: body
         label: Contenu
         type: rich-text
