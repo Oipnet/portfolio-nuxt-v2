@@ -3,7 +3,11 @@ content:
     label: Posts
     path: content/blog
     type: collection
+    filename: fields.slug
     fields:
+      - name: slug
+        label: Nom du fichier
+        type: string
       - name: published
         label: Published
         type: date
