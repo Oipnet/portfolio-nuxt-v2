@@ -1,4 +1,5 @@
 ---
+filename: conseils-pour-appliquer-les-design-patterns-dans-vos-projets
 published: 2028-09-12
 author: Arnaud POINTET
 keywords: WIP
