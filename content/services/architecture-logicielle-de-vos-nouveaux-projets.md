@@ -1,5 +1,6 @@
 ---
 title: Architecture logicielle de vos nouveaux projets
+slug: architecture-logicielle-de-vos-nouveaux-projets
 ---
 Optimisez le succès de vos nouveaux projets grâce à une architecture logicielle solide et bien pensée.
 
