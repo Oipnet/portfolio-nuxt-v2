@@ -7,6 +7,7 @@ En analysant vos besoins spécifiques et en utilisant les meilleures pratiques d
 
 Assurez-vous que vos applications soient prêtes à évoluer avec votre entreprise tout en maintenant une haute qualité et une grande fiabilité.
 
-**_Confiez-moi l'architecture de vos projets et bénéficiez d'une base technique sur mesure pour vos innovations._**
 
+**Confiez-moi l'architecture de vos projets et bénéficiez d'une base technique sur mesure pour vos innovations.**
+<!--more-->
 WIP
