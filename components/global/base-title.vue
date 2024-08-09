@@ -9,7 +9,7 @@ defineProps<{
 <template>
   <div class="mb-5">
     <h1 class="text-4xl font-title text-primary mt-10 ml-24">{{ title }}</h1>
-    <h2 v-if="subTitle" class="font-sub-title ml-24">{{ subTitle }}</h2>
+    <h2 v-if="subTitle" class="font-sub-title ml-24 text-primary-hover">{{ subTitle }}</h2>
   </div>
 </template>
 

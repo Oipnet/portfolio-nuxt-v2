@@ -4,7 +4,7 @@
 
 <template>
   <BaseTitle title="A votre service" sub-title="Mes compétences à votre disposition"/>
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+  <div class="grid grid-cols-1 xl:grid-cols-3 gap-8">
     <div class="border rounded p-8 leading-relaxed">
       <h3 class="text-2xl font-title text-primary mb-8">Architecture logicielle de vos nouveaux projets</h3>
       <p class="mb-2">

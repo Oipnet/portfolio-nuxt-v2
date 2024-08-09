@@ -12,7 +12,9 @@ export default <Partial<Config>>{
             colors: {
                 black: '#081408',
                 primary: '#5a8036',
-                'primary-hover': '#466045',
+                'primary-hover': '#9CB386',
+                secondary: '#DEE6D7',
+                'secondary-hover': '#FFEF99'
             },
             gridTemplateColumns: {
                 'header': '2fr 1fr',

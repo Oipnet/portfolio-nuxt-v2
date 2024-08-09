@@ -6,7 +6,7 @@ const { data: articles } = await useListArticles(3)
 </script>
 
 <template>
-  <footer class="bg-primary-hover min-h-64 pt-8 text-white text-sm">
+  <footer class="bg-primary min-h-64 pt-8 text-white text-sm">
     <div class="container mx-auto flex flex-col md:flex-row justify-center text-center md:text-left">
       <div class="w-full md:w-1/3 py-4 md:px-4">
         <h3 class="text-2xl font-title mb-4">Navigation</h3>
