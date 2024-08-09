@@ -4,6 +4,9 @@ content:
     path: content/blog
     type: collection
     fields:
+      - name: filename
+        label: Nom du fichier
+        type: string
       - name: published
         label: Published
         type: date
