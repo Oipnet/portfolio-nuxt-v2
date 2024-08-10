@@ -95,6 +95,9 @@ content:
         label: Titre
         type: string
         required: true
+      - name: cover
+        label: Couverture
+        type: image
       - name: body
         label: Contenu
         type: rich-text
