@@ -99,6 +99,38 @@ content:
         label: Contenu
         type: rich-text
         required: true
+      - name: sitemap
+        label: Sitemap
+        type: object
+        fields:
+          - name: loc
+            label: Loc
+            type: string
+          - name: lastmod
+            label: Last modification
+            type: date
+          - name: changefreq
+            label: Change freq
+            type: select
+            options:
+              values:
+              - value: always
+                label: Always
+              - value: hourly
+                label: Hourly
+              - value: daily
+                label: Daily
+              - value: weekly
+                label: Weekly
+              - value: monthly
+                label: Monthly
+              - value: yearly
+                label: Yearly
+              - value: never
+                label: Never
+          - name: priority
+            label: Priority
+            type: number
 
         
 media:
