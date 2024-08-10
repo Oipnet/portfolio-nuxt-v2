@@ -1,6 +1,7 @@
 ---
 slug: architecture-logicielle-de-vos-nouveaux-projets
 title: Architecture logicielle de vos nouveaux projets
+cover: img/content/services/imgonline-com-ua-Color-filter-svPTokCOj0Zg.jpg
 sitemap:
   loc: /services/architecture-logicielle-de-vos-nouveaux-projets
   lastmod: 2024-08-10
