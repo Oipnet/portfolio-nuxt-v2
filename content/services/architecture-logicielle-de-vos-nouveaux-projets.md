@@ -1,6 +1,10 @@
 ---
-title: Architecture logicielle de vos nouveaux projets
 slug: architecture-logicielle-de-vos-nouveaux-projets
+title: Architecture logicielle de vos nouveaux projets
+sitemap:
+  loc: /services/architecture-logicielle-de-vos-nouveaux-projets
+  lastmod: 2024-08-10
+  changefreq: never
 ---
 Optimisez le succès de vos nouveaux projets grâce à une architecture logicielle solide et bien pensée.
 
