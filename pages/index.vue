@@ -32,6 +32,4 @@ import {useListServices} from "~/composables/services/useListServices";
 
 const testimonials = await useListTestimonials();
 const services = await useListServices(3)
-
-console.log(services)
 </script>
