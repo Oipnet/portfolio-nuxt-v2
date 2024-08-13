@@ -19,7 +19,8 @@ export default defineNuxtConfig({
     "nuxt-vercel-analytics"
   ],
   plugins: [
-    '~/plugins/disqus'
+    '~/plugins/disqus',
+    '~/plugins/navigation'
   ],
 
   formkit: {
