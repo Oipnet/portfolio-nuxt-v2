@@ -100,6 +100,10 @@ useHead({
   @apply p-4;
 }
 
+.nuxt-content a {
+  @apply text-primary hover:underline;
+}
+
 .nuxt-content code {
   overflow-x: scroll;
 }
