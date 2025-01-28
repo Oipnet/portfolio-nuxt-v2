@@ -36,6 +36,7 @@
   },
   "devDependencies": {
     "@iconify-json/clarity": "^1.1.13",
+    "@nuxthq/studio": "^2.2.1",
     "@nuxtjs/pwa": "^3.3.5"
   }
 }
