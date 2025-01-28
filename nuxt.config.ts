@@ -16,7 +16,8 @@ export default defineNuxtConfig({
     "@tailvue/nuxt",
     "@nuxt/content",
     "vue3-carousel-nuxt",
-    "nuxt-vercel-analytics"
+    "nuxt-vercel-analytics",
+    "@nuxthq/studio"
   ],
   plugins: [
     '~/plugins/disqus',
