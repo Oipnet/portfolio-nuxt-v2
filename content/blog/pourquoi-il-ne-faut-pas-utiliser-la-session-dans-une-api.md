@@ -3,7 +3,7 @@ slug: pourquoi-il-ne-faut-pas-utiliser-la-session-dans-une-api
 published: 2025-09-10
 author: Arnaud POINTET
 keywords: Symfony, API Symfony, Session PHP, Session Symfony, API REST, Stateless API, JWT Authentication, OAuth2, OpenID Connect, Sécurité API, Performance Symfony, Blocage Session, Verrou Session, Tutoriel Symfony, Bonnes Pratiques API, Développement Web, Scalabilité API, Token Based Authentication, API sécurisée, Guide Symfony
-title: Symfony : pourquoi il ne faut pas utiliser la session dans une API
+title: "Symfony : pourquoi il ne faut pas utiliser la session dans une API"
 cover: img/content/pourquoi-il-ne-faut-pas-utiliser-la-session-dans-une-api/cover.png
 sitemap:
   loc: /blog/pourquoi-il-ne-faut-pas-utiliser-la-session-dans-une-api
