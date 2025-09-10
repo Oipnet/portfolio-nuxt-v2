@@ -31,6 +31,7 @@ Cela provoque :
 - une mauvaise UX côté front (les requêtes se bloquent entre elles),
 - un gaspillage de workers PHP-FPM.
 
+
 ### Exemple concret
 ```php
 #[Route('/api/status', name: 'api_status')]

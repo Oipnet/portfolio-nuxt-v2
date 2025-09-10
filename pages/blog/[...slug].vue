@@ -107,4 +107,27 @@ useHead({
 .nuxt-content code {
   overflow-x: scroll;
 }
+
+.nuxt-content ul {
+  @apply list-disc list-outside mb-4 pl-6;
+}
+
+.nuxt-content ol {
+  @apply list-decimal list-outside mb-4 pl-6;
+}
+
+.nuxt-content li {
+  @apply mb-2 leading-relaxed text-gray-800;
+}
+
+.nuxt-content ul ul,
+.nuxt-content ol ol,
+.nuxt-content ul ol,
+.nuxt-content ol ul {
+  @apply mb-2 ml-6;
+}
+
+.nuxt-content li::marker { 
+  color: theme('colors.primary');
+}
 </style>
