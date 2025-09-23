@@ -12,29 +12,9 @@ sitemap:
   priority: 0.8
 ---
 
-En septembre 2025, un incident marquant a touché l’écosystème npm. Josh Junon, un mainteneur bien connu sous le pseudonyme "qix", a été victime d’une attaque de phishing. Cela a permis aux attaquants d’injecter du code malveillant dans 18 packages très populaires, représentant plus de 2,6 milliards de téléchargements par semaine. Ces paquets, comme `debug`, `chalk` ou `ansi-styles`, ont été compromis et contenaient un malware visant les transactions de crypto-monnaies.
+En septembre 2025, un incident marquant a touché l’écosystème npm. Josh Junon, un mainteneur bien connu sous le pseudonyme "qix", a été victime d’une attaque de phishing. Cela a permis aux attaquants d’injecter du code malveillant dans 18 packages très populaires, représentant plus de 2,6 milliards de téléchargements par semaine. Ces paquets, comme debug, chalk ou ansi-styles, ont été compromis et contenaient un malware visant les transactions de crypto-monnaies.
 
 <!--more-->
-
-Parmi les packages compromis, on retrouvait notamment :
-
-| Package           |
-|-------------------|
-| debug             |
-| chalk             |
-| ansi-styles       |
-| strip-ansi        |
-| supports-color    |
-| wrap-ansi         |
-| color-convert     |
-| slice-ansi        |
-| has-ansi          |
-| color-name        |
-| color-string      |
-| is-arrayish       |
-| chalk-template    |
-| ansi-regex        |
-| supports-hyperlinks |
 
 Pour plus de détails, vous pouvez consulter l’[article complet](https://www.trendmicro.com/en_us/research/25/i/npm-supply-chain-attack.html).
 
