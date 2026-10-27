@@ -7,7 +7,8 @@ const message = reactive({
   title: '',
   email: '',
   phone: '',
-  message: ''
+  message: '',
+  website: ''
 })
 
 const handleCreateContact = async () => {
@@ -25,7 +26,8 @@ const handleCreateContact = async () => {
     title: '',
     email: '',
     phone: '',
-    message: ''
+    message: '',
+    website: ''
   })
 }
 </script>
@@ -104,6 +106,11 @@ const handleCreateContact = async () => {
               length: 'Le message doit contenir au moins 10 caractères'
             }"
         ></FormKit>
+        <!-- Champ piège anti-spam, invisible pour les visiteurs -->
+        <div class="hidden" aria-hidden="true">
+          <label for="website">Ne pas remplir ce champ</label>
+          <input id="website" v-model="message.website" type="text" name="website" tabindex="-1" autocomplete="off">
+        </div>
         <FormKit
             type="submit"
             label="Envoyer"

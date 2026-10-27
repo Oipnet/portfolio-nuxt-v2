@@ -50,7 +50,17 @@ export default defineNuxtConfig({
   },
 
   runtimeConfig: {
-    apiUrl: process.env.API_URL,
+    // Envoi du formulaire de contact (surchargeable via NUXT_SMTP_* / NUXT_CONTACT_*)
+    smtp: {
+      host: process.env.SMTP_HOST || '',
+      port: Number(process.env.SMTP_PORT || 465),
+      user: process.env.SMTP_USER || '',
+      pass: process.env.SMTP_PASS || '',
+    },
+    contact: {
+      to: process.env.CONTACT_TO || '',
+      from: process.env.CONTACT_FROM || '',
+    },
     public: {
       baseUrl: process.env.PUBLIC_BASE_URL || 'https://forelse.fr',
     },
