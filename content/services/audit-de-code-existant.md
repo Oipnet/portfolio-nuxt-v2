@@ -1,6 +1,10 @@
 ---
 slug: audit-de-code-existant
 title: Audit de code existant
+sitemap:
+  loc: /services/audit-de-code-existant
+  lastmod: 2026-10-27
+  changefreq: monthly
 ---
 Améliorez la qualité et la performance de vos applications grâce à un audit de code approfondi.
 
@@ -8,4 +12,3 @@ J'analyse votre code existant pour identifier les failles, les inefficacités et
 
 ***Faites confiance à mon expertise pour élever vos applications à un niveau supérieur et garantir leur succès à long terme.***
 <!--more-->
-WIP

@@ -8,7 +8,7 @@ export const useJsonMetadata = (frontmatter: Frontmatter) => {
             '@type': 'Article',
             headline: frontmatter.title,
             description: frontmatter.description,
-            image: frontmatter.cover,
+            image: `${frontmatter.baseUrl.replace(/\/$/, '')}/${frontmatter.cover.replace(/^\//, '')}`,
             author: {
                 '@type': 'Person',
                 name: frontmatter.author
@@ -18,7 +18,7 @@ export const useJsonMetadata = (frontmatter: Frontmatter) => {
                 name: 'Forelse',
                 logo: {
                     '@type': 'ImageObject',
-                    url: 'https://forelse.fr/images/logo.png'
+                    url: 'https://forelse.fr/img/logo-400.png'
                 }
             },
             datePublished: frontmatter.published,

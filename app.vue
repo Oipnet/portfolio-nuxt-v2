@@ -15,7 +15,14 @@ useHead({
   htmlAttrs: {
     lang: 'fr'
   },
+  titleTemplate: (title) => title && !title.includes('Forelse') ? `${title} - Forelse` : title,
   title: 'Forelse - Conception et réalisation d\'application WEB',
+  meta: [
+    {
+      name: 'description',
+      content: 'Forelse, développeur PHP / Symfony freelance près de Bordeaux : architecture logicielle, audit de code et maintenance de vos applications web.'
+    }
+  ],
   link: [
     {
       rel: 'icon',

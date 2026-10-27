@@ -18,7 +18,7 @@ const frontmatter: Frontmatter = {
   title: page?.value?.title || '',
   author: page?.value?.author || '',
   description: page?.value?.description || '',
-  keywords: page?.value?.keywords.split(',') || [],
+  keywords: page?.value?.keywords?.split(',') || [],
   url: route.fullPath,
   baseUrl: config.public.baseUrl || ''
 } || {}

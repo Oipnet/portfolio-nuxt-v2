@@ -1,9 +1,0 @@
----
-slug: test
-published: 2030-08-09
-author: Arnaud POINTET
-title: Test
-sitemap:
-  lastmod: 2024-08-09
----
-Ceci est un test

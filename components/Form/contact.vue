@@ -2,16 +2,6 @@
 import { reset } from '@formkit/core'
 import {useToast} from "tailvue";
 
-const props = defineProps<{ name: { firstName: string, lastName: string } }>()
-
-const fullName = computed(() => {
-  return `${props.name.firstName} ${props.name.lastName}`;
-});
-
-const email = computed(() => {
-  return `${props.name.firstName.replace(/[^a-zA-Z0-9]/g, '_').toLowerCase()}@${props.name.lastName.replace(/[^a-zA-Z0-9]/g, '_').toLowerCase()}.com`;
-});
-
 const message = reactive({
   name: '',
   title: '',
@@ -20,8 +10,13 @@ const message = reactive({
   message: ''
 })
 
-const handleCreateContact = async (e: SubmitEvent) => {
-  await useCreateContact(message)
+const handleCreateContact = async () => {
+  try {
+    await useCreateContact(message)
+  } catch (e) {
+    useToast().danger('Votre message n\'a pas pu être envoyé. Merci de réessayer ou de m\'écrire directement par e-mail.')
+    return
+  }
 
   useToast().success('Votre message a bien été envoyé')
 
@@ -45,13 +40,13 @@ const handleCreateContact = async (e: SubmitEvent) => {
             id="name"
             label="Nom complet"
             help="Votre nom complet"
-            :placeholder="fullName"
+            placeholder="Jean Dupont"
             v-model="message.name"
-            validation="required|alpha:latin"
+            validation="required|length:2"
             validation-visibility="blur"
             :validation-messages="{
               required: 'Le nom est obligatoire',
-              alpha: 'Le nom ne doit contenir que des lettres'
+              length: 'Le nom doit contenir au moins 2 caractères'
             }"
         />
         <FormKit
@@ -74,7 +69,7 @@ const handleCreateContact = async (e: SubmitEvent) => {
             id="email"
             label="Adresse email"
             help="Votre adresse email"
-            :placeholder="email"
+            placeholder="jean.dupont@exemple.fr"
             v-model="message.email"
             validation="required|email"
             validation-visibility="blur"

@@ -13,6 +13,7 @@ export default <Partial<Config>>{
                 black: '#081408',
                 primary: '#5a8036',
                 'primary-hover': '#9CB386',
+                'primary-dark': '#3f5a26',
                 secondary: '#DEE6D7',
                 'secondary-hover': '#FFEF99'
             },
