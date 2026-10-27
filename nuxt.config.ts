@@ -3,6 +3,26 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
 
+  // Le contenu ne change qu'à chaque déploiement : les pages sont pré-rendues
+  // au build et servies depuis le CDN de Vercel au lieu d'être rendues à chaque visite.
+  nitro: {
+    prerender: {
+      crawlLinks: true,
+      routes: ['/', '/sitemap.xml'],
+    },
+  },
+
+  routeRules: {
+    '/**': {
+      headers: {
+        'X-Content-Type-Options': 'nosniff',
+        'X-Frame-Options': 'SAMEORIGIN',
+        'Referrer-Policy': 'strict-origin-when-cross-origin',
+        'Permissions-Policy': 'camera=(), microphone=(), geolocation=(), interest-cohort=()',
+      },
+    },
+  },
+
   modules: [
     "@nuxtjs/tailwindcss",
     "@nuxt/image",
@@ -32,7 +52,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     apiUrl: process.env.API_URL,
     public: {
-      baseUrl: process.env.PUBLIC_BASE_URL || 'http://localhost:3000',
+      baseUrl: process.env.PUBLIC_BASE_URL || 'https://forelse.fr',
     },
   },
   content: {

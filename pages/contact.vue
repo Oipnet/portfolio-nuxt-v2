@@ -3,7 +3,7 @@
     <BaseTitle title="Me contacter" />
     <div class="min-h-[420px] mx-4 md:mx-auto">
       <ClientOnly>
-          <Contact :name="name" />
+          <Contact />
       </ClientOnly>
     </div>
   </Container>
@@ -12,7 +12,9 @@
 </template>
 <script setup lang="ts">
 import Contact from "~/components/Form/contact.vue";
-import {useNameGenerator} from "~/composables/useNameGenerator";
 
-const name = await useNameGenerator();
+useSeoMeta({
+  title: 'Me contacter',
+  description: 'Contactez Forelse, développeur PHP / Symfony freelance près de Bordeaux, pour un devis, un audit de code ou la maintenance de votre application.',
+})
 </script>

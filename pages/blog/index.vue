@@ -3,6 +3,11 @@ import { ref, computed } from 'vue';
 import {format} from "date-fns";
 import {useListArticles} from "~/composables/blog/useListArticles";
 
+useSeoMeta({
+  title: 'Blog',
+  description: 'Articles sur PHP, Symfony, API Platform et la sécurité des applications web, par Arnaud Pointet (Forelse).',
+})
+
 const currentPage = ref(1);
 const itemsPerPage = 9;
 
@@ -27,8 +32,8 @@ const paginatedArticles = computed(() => {
             <NuxtPicture format="webp" :src="article.cover" :alt="article.title"
                          :img-attrs="{ class: 'w-full h-48 object-contain'}"/>
             <div class="p-4">
-              <h1 class="text-xl text-center font-title font-semibold">{{ article.title }}</h1>
-              <h2 class="text-xs text-center font-sub-title">Publié le {{ format(article.published, 'dd/MM/yyyy')}} par {{ article.author }}</h2>
+              <h2 class="text-xl text-center font-title font-semibold">{{ article.title }}</h2>
+              <p class="text-xs text-center font-sub-title">Publié le {{ format(article.published, 'dd/MM/yyyy')}} par {{ article.author }}</p>
             </div>
             <div class="p-4 md:min-h-[150px] xl:min-h-[250px]">
               <ClientOnly>
@@ -37,7 +42,7 @@ const paginatedArticles = computed(() => {
                 </p>
               </ClientOnly>
             </div>
-            <NuxtLink :href="article._path" class="block mt-8 text-right font-sub-title self-end underline">Lire la suite</NuxtLink>
+            <NuxtLink :href="article._path" class="block mt-8 text-right font-sub-title self-end underline">Lire la suite<span class="sr-only"> : {{ article.title }}</span></NuxtLink>
           </article>
       </div>
     </div>
