@@ -4,6 +4,7 @@ interface Contact {
     email: string;
     phone: string;
     message: string;
+    website?: string;
 }
 
 export const useCreateContact = async (contact: Contact) => {
@@ -14,7 +15,8 @@ export const useCreateContact = async (contact: Contact) => {
             title: contact.title,
             email: contact.email,
             phone: contact.phone.length ? contact.phone : null,
-            message: contact.message
+            message: contact.message,
+            website: contact.website ?? ''
         }
     })
 }
